@@ -11,7 +11,6 @@ LiquidCrystal_I2C lcd(0x27, lcdColumns, lcdRows);
 #define Green D6
 #define Buzzer D7
 #define Sensor A0
-/home/riza/Downloads/arduino-ide_2.3.4_Linux_64bit.AppImage
 const char* ssid = "Airsense";
 const char* password = "1234567890";
 const char* apiUrl = "https://air-sense-api.vercel.app/";
