@@ -5,12 +5,12 @@ The **AirSense Mobile Application** is a companion app for the AirSense IoT Gas 
 ## Features
 
 ### 1. **Gauge Meter for Gas Levels**
-    - Displays real-time gas levels using an intuitive gauge meter.
-    - Allows users to monitor air quality at a glance.
+- Displays real-time gas levels using an intuitive gauge meter.
+- Allows users to monitor air quality at a glance.
 
 ### 2. **System Controls**
-    - **Turn System On/Off**: Control the monitoring system remotely with a toggle button.
-    - **Set Normal Value**: Adjust the threshold for normal gas levels dynamically from the app.
+- **Turn System On/Off**: Control the monitoring system remotely with a toggle button.
+- **Set Normal Value**: Adjust the threshold for normal gas levels dynamically from the app.
 
 ### 3. **Sensor Logs**
 - Stores and displays logs of sensor data in real time.
@@ -37,7 +37,7 @@ The **AirSense Mobile Application** is a companion app for the AirSense IoT Gas 
     ```
 2. Navigate to the application directory:
     ```bash
-    cd AirSense/application
+    cd AirSense/Application
     ```
 3. Install dependencies:
     ```bash
