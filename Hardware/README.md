@@ -93,6 +93,60 @@ The system interacts with the following endpoints:
         const char* apiUrl = "https://air-sense-api.vercel.app/";
         const char* stateUrl = "https://air-sense-api.vercel.app/state";
               ```
+
+## Functions Overview
+
+1. **`fetchSystemState()`**:
+    - Fetches the current system state and normal air value from the API.
+    - Updates the global variables `systemOn` and `normalAirValue`.
+
+2. **`checkGasLevel()`**:
+    - Reads the gas sensor value.
+    - Compares it against `normalAirValue` and triggers alerts if necessary.
+    - Sends the gas level data to the API.
+
+3. **`idleMode()`**:
+    - Disables all indicators and sets the system to idle mode.
+
+4. **`loop()`**:
+    - Continuously fetches the system state and checks gas levels if the system is ON.
+
+## Visual Indicators
+
+| Component  | Status       | Action                               |
+|------------|--------------|--------------------------------------|
+| Green LED  | ON           | Gas level is normal.                |
+| Red LED    | ON           | Gas level is high.                  |
+| Buzzer     | ON           | Gas level is high.                  |
+| LCD        | Gas level    | Displays gas level and system state.|
+
+## Troubleshooting
+
+1. **Wi-Fi Connection Issues**:
+    - Ensure the correct SSID and password are set in the code.
+    - Check if the Wi-Fi network is operational and within range.
+
+2. **Sensor Malfunction**:
+    - Verify the connections between the gas sensor and the ESP8266.
+    - Ensure the sensor is powered correctly and not damaged.
+
+3. **API Communication Problems**:
+    - Check if the API endpoints are accessible and the URLs are correct.
+    - Verify the device has internet access.
+
+4. **Display Issues**:
+    - Ensure the I2C address of the LCD is correctly set in the code.
+    - Check the connections between the LCD and the ESP8266.
+
+5. **Alert System Not Working**:
+    - Verify the connections of the LEDs and buzzer.
+    - Ensure the correct pins are defined in the code.
+
+## Acknowledgments
+
+- Inspired by IoT projects in air quality monitoring.
+- Thanks to the open-source community for providing essential libraries.
+
 ### License
 
 This project is licensed under [MIT License](LICENSE).
