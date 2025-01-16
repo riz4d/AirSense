@@ -48,25 +48,6 @@ The **AirSense Mobile Application** is a companion app for the AirSense IoT Gas 
     flutter run
     ```
 
-## Contributing
-
-We welcome contributions to improve the AirSense Mobile Application. To contribute, please follow these steps:
-
-1. Fork the repository.
-2. Create a new branch:
-    ```bash
-    git checkout -b feature-branch
-    ```
-3. Make your changes and commit them:
-    ```bash
-    git commit -m "Description of changes"
-    ```
-4. Push to the branch:
-    ```bash
-    git push origin feature-branch
-    ```
-5. Create a pull request detailing your changes.
-
 ## License
 
 This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
