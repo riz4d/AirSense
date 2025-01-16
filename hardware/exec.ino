@@ -17,6 +17,7 @@ const char* apiUrl = "https://air-sense-api.vercel.app/";
 const char* stateUrl = "https://air-sense-api.vercel.app/state";
 
 bool systemOn = false;
+float normalAirValue = 0.0;
 
 void setup() {
   Serial.begin(9600);
@@ -53,14 +54,16 @@ void fetchSystemState() {
       String response = http.getString();
       Serial.println("State response: " + response);
 
-      StaticJsonDocument<200> doc;
+      StaticJsonDocument<300> doc;
       DeserializationError error = deserializeJson(doc, response);
       if (!error) {
         const char* status = doc["status"];
         int state = doc["systemstate"];
+        float airValue = doc["normalairValue"];
 
         if (String(status) == "success") {
           systemOn = (state == 1);
+          normalAirValue = airValue;
         }
       } else {
         Serial.print("JSON Parsing Error: ");
@@ -79,17 +82,17 @@ void checkGasLevel() {
   int sensor = analogRead(Sensor);
   Serial.println(sensor);
   sensor = map(sensor, 0, 1024, 0, 100);
-  
-  if (sensor <= 50) {
+
+  if (sensor <= normalAirValue) {
     digitalWrite(Green, HIGH);
     digitalWrite(Red, LOW);
-    digitalWrite(Buzzer, LOW); // No buzzer for normal values
+    digitalWrite(Buzzer, LOW);
     lcd.setCursor(0, 1);
     lcd.print("Gas value:Normal");
-  } else if (sensor > 50) {
+  } else if (sensor > normalAirValue) {
     digitalWrite(Green, LOW);
     digitalWrite(Red, HIGH);
-    digitalWrite(Buzzer, HIGH); // Buzzer on for high values
+    digitalWrite(Buzzer, HIGH);
     lcd.setCursor(0, 1);
     lcd.print("Gas value:High");
   }
@@ -97,7 +100,6 @@ void checkGasLevel() {
   lcd.print("Value : ");
   lcd.print(sensor);
 
-  // Send data to the server
   if (WiFi.status() == WL_CONNECTED) {
     WiFiClientSecure client;
     client.setInsecure();
