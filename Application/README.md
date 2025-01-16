@@ -24,6 +24,22 @@ The **AirSense Mobile Application** is a companion app for the AirSense IoT Gas 
 - Communicates with the AirSense API using HTTPS.
 - Ensures data privacy and reliability.
 
+## Usage
+
+### Gauge Meter
+- View real-time gas levels using an intuitive gauge interface.
+- The meter updates automatically as sensor values change.
+
+### System Controls
+- Use the toggle button to enable or disable the system.
+- Adjust the normal air value via the slider.
+
+### Analytics
+- Access the "Analytics" tab to view graphical trends and real-time data logs.
+
+### Logs
+- Check detailed logs of gas sensor data for historical reference.
+
 ## Installation
 
 ### Prerequisites
