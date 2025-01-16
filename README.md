@@ -96,8 +96,8 @@ The mobile application is developed using Flutter and provides an easy-to-use in
 <table>
     <tbody>
         <tr>
-            <td valign="top" ><a href="https://github.com/riz4d"><img src="https://avatars.githubusercontent.com/u/73955457?v=4?s=100" width="100px;" alt="Kent C. Dodds"/><br /><sub><b>Mohamed Rizad</b></sub></a></td>
-            <td valign="top" ><a href="https://github.com/Mohammed-Fahiz"><img src="https://avatars.githubusercontent.com/u/138813355?v=4?s=100" width="100px;" alt="Jeroen Engels"/><br /><sub><b>Jeroen Engels</b></sub></a></td>
+            <td valign="top" ><a href="https://github.com/riz4d"><img src="https://avatars.githubusercontent.com/u/73955457?v=4?s=100" width="100px;" alt="Mohamed Rizad"/><br /><sub><b>Mohamed Rizad</b></sub></a></td>
+            <td valign="top" ><a href="https://github.com/Mohammed-Fahiz"><img src="https://avatars.githubusercontent.com/u/138813355?v=4?s=100" width="100px;" alt="Mohammed Fahiz"/><br /><sub><b>Mohammed-Fahiz</b></sub></a></td>
         </tr>
     </tbody>
 </table>
