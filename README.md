@@ -92,6 +92,16 @@ The mobile application is developed using Flutter and provides an easy-to-use in
 - **Real-Time Analytics**: View gas levels over time with graphs and logs.
 - **Sensor Logs**: View historical data from the sensors.
 
+## Collaborators
+<table>
+    <tbody>
+        <tr>
+            <td valign="top" ><a href="https://github.com/riz4d"><img src="https://avatars.githubusercontent.com/u/73955457?v=4?s=100" width="100px;" alt="Kent C. Dodds"/><br /><sub><b>Mohamed Rizad</b></sub></a></td>
+            <td valign="top" ><a href="https://github.com/Mohammed-Fahiz"><img src="https://avatars.githubusercontent.com/u/138813355?v=4?s=100" width="100px;" alt="Jeroen Engels"/><br /><sub><b>Jeroen Engels</b></sub></a></td>
+        </tr>
+    </tbody>
+</table>
+
 ## License
 
 This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for more information.
