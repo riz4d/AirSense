@@ -34,7 +34,7 @@ Flask-based API for handling and managing sensor data. It supports real-time com
     ```bash
     python main.py
     ```
-    The server will start on http://0.0.0.0:8082 by default.
+    The server will start on http://0.0.0.0:80 by default.
 
 ## API Endpoints
 
