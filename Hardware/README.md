@@ -19,6 +19,7 @@ IoT-based gas monitoring system designed to detect and report gas levels in real
     - Turns on the red LED and buzzer if the gas level exceeds the normal value.
 4. The gas level is displayed on the LCD, and the data is sent to the API.
 5. If the system is OFF, the device enters idle mode, turning off all LEDs and the buzzer.
+
 ## Components Used
 
 1. **Hardware:**
@@ -38,58 +39,59 @@ IoT-based gas monitoring system designed to detect and report gas levels in real
       - WiFiClientSecure
       - ArduinoJson
 
-    ## API Endpoints
+## API Endpoints
 
-    The system interacts with the following endpoints:
+The system interacts with the following endpoints:
 
-    1. **System State Endpoint**: `https://air-sense-api.vercel.app/state`
-        - **Method**: `GET`
-        - **Response**:
-          ```json
-          {
-             "status": "success",
-             "systemstate": 1,
-             "normalairValue": 50.0
-          }
-          ```
+1. **System State Endpoint**: `https://air-sense-api.vercel.app/state`
+    - **Method**: `GET`
+    - **Response**:
+    
+        ```json
+        {
+            "status": "success",
+            "systemstate": 1,
+            "normalairValue": 50.0
+        }
+        ```
 
-    2. **Sensor Data Endpoint**: `https://air-sense-api.vercel.app/`
-        - **Method**: `POST`
-        - **Payload**:
-          ```json
-          {
-             "sensorValue": 42
-          }
-          ```
+2. **Sensor Data Endpoint**: `https://air-sense-api.vercel.app/`
+    - **Method**: `POST`
+    - **Payload**:
+        ```json
+        {
+            "sensorValue": 42
+        }
+        ```
 
-        ## Installation and Setup
+## Installation and Setup
 
-        1. **Hardware Setup**:
-            - Connect the gas sensor to the analog input pin of the ESP8266.
-            - Attach the LCD display via the I2C interface.
-            - Connect the LEDs and buzzer to digital pins as specified in the code.
+1. **Hardware Setup**:
+    - Connect the gas sensor to the analog input pin of the ESP8266.
+    - Attach the LCD display via the I2C interface.
+    - Connect the LEDs and buzzer to digital pins as specified in the code.
 
-        2. **Software Setup**:
-            - Install the required libraries in the Arduino IDE:
-              - `LiquidCrystal_I2C`
-              - `ESP8266WiFi`
-              - `ESP8266HTTPClient`
-              - `WiFiClientSecure`
-              - `ArduinoJson`
-            - Upload the code to the ESP8266 using the Arduino IDE.
+2. **Software Setup**:
+    - Install the required libraries in the Arduino IDE:
+        - `LiquidCrystal_I2C`
+        - `ESP8266WiFi`
+        - `ESP8266HTTPClient`
+        - `WiFiClientSecure`
+        - `ArduinoJson`
+    - Upload the code to the ESP8266 using the Arduino IDE.
 
-        3. **Wi-Fi Configuration**:
-            - Set the Wi-Fi SSID and password in the following section of the code:
-              ```cpp
-              const char* ssid = "Airsense";
-              const char* password = "1234567890";
-              ```
+3. **Wi-Fi Configuration**:
+    - Set the Wi-Fi SSID and password in the following section of the code:
+        ```cpp
+        const char* ssid = "Airsense";
+        const char* password = "1234567890";
+        ```
 
-        4. **API Configuration**:
-            - Update the API URLs if needed:
-              ```cpp
-              const char* apiUrl = "https://air-sense-api.vercel.app/";
-              const char* stateUrl = "https://air-sense-api.vercel.app/state";
+4. **API Configuration**:
+    - Update the API URLs if needed:
+        ```cpp
+        const char* apiUrl = "https://air-sense-api.vercel.app/";
+        const char* stateUrl = "https://air-sense-api.vercel.app/state";
               ```
 ### License
 
