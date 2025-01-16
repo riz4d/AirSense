@@ -64,6 +64,11 @@ The **AirSense Mobile Application** is a companion app for the AirSense IoT Gas 
     flutter run
     ```
 
+## Acknowledgments
+
+Thanks to the Flutter community for their amazing libraries and support.
+Inspired by modern IoT applications for air quality monitoring.
+
 ## License
 
 This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
