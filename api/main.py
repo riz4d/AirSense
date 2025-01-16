@@ -1,12 +1,10 @@
 from flask import Flask, request, jsonify
 from flask_socketio import SocketIO, emit
+from constants import latest_sensor_value, normalairValue, system_state_val
+from system import Debug, Host, Port
 
 app = Flask(__name__)
 socketio = SocketIO(app, cors_allowed_origins="*")
-
-latest_sensor_value = None
-system_state_val = 0
-normalairValue = 50
 
 @app.route('/', methods=['POST'])
 def receive_data():
@@ -30,6 +28,7 @@ def get_sensor_value():
         return jsonify({"status": "success", "sensorValue": latest_sensor_value}), 200
     else:
         return jsonify({"status": "error", "message": "No data available"}), 404
+    
 @app.route('/system', methods=['POST'])
 def system_state():
     global system_state_val
@@ -51,6 +50,7 @@ def get_state():
         return jsonify({"status": "success", "systemstate": system_state_val, "normalairValue":normalairValue}), 200
     else:
         return jsonify({"status": "error", "message": "No data available"}), 404
+    
 @app.route('/normalvalue', methods=['POST'])
 def normal_val():
     global normalairValue
@@ -80,4 +80,4 @@ def handle_connect():
         emit('sensor_update', {'sensorValue': latest_sensor_value})
 
 if __name__ == '__main__':
-    socketio.run(app)
+    socketio.run(app,debug=Debug, host=Host, port=Port)

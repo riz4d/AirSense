@@ -1,0 +1,3 @@
+Port = 80
+Host = '0.0.0.0'
+Debug = True
