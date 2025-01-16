@@ -1,7 +1,7 @@
 from flask import Flask, request, jsonify
 from flask_socketio import SocketIO, emit
-from constants import latest_sensor_value, normalairValue, system_state_val
-from system import Debug, Host, Port
+from Api.modules.constants import latest_sensor_value, normalairValue, system_state_val
+from Api.modules.system import Debug, Host, Port
 
 app = Flask(__name__)
 socketio = SocketIO(app, cors_allowed_origins="*")
