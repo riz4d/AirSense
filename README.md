@@ -5,16 +5,16 @@
 
 ## How It Works
 
-### Data Collection
+#### Data Collection
 The ESP8266 reads gas levels from the sensor and sends them to the Flask API at regular intervals.
 
-### Mobile App Monitoring
+#### Mobile App Monitoring
 The mobile application fetches real-time gas data and updates the gauge meter accordingly.
 
-### System Control
+#### System Control
 Users can adjust the normal gas value threshold and turn the system on or off via the mobile app.
 
-### Data Logging & Analytics
+#### Data Logging & Analytics
 The application stores sensor logs and displays them in real-time, allowing users to monitor the trends.
 
 ## Project Overview
