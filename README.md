@@ -49,7 +49,7 @@ The **hardware** component is based on an ESP8266 microcontroller that reads gas
 - Connect the LCD to the ESP8266 via I2C (usually **SDA** and **SCL** pins).
 - Wire the **Red, Green, and Buzzer** pins for status indication.
 
-> **Refer to the `hardware/README.md`** for detailed setup and wiring instructions.
+> **Refer to the `Hardware/README.md`** for detailed setup and wiring instructions.
 
 ---
 
@@ -80,9 +80,7 @@ The **API** handles all communication between the hardware sensors and the mobil
     ```bash
     python app.py
     ```
-
-### Deployment:
-The API can be deployed to platforms like Heroku using the provided `Procfile` and `heroku.json`.
+> **Refer to the `Api/README.md`** for detailed setup and instructions.
 
 ## Mobile Application
 
