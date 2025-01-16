@@ -1,0 +1,10 @@
+{
+    "name": "AirSense API",
+    "description": "A Flask-based API for handling sensor data with real-time updates using Socket.IO",
+    "repository": "https://github.com/riz4d/AirSense/Api",
+    "stack": "heroku-22",
+    "scripts": {
+      "postdeploy": "echo 'Deployed successfully!'"
+    }
+  }
+  
