@@ -10,6 +10,15 @@ IoT-based gas monitoring system designed to detect and report gas levels in real
 - Wi-Fi connectivity for seamless data transmission.
 - Dynamic threshold adjustment for normal gas levels.
 
+## How It Works
+
+1. On startup, the ESP8266 connects to the specified Wi-Fi network.
+2. The system fetches the current operational state (`systemOn`) and normal air value (`normalAirValue`) from the API.
+3. If the system is ON, it reads the gas sensor values and:
+    - Turns on the green LED if the gas level is normal.
+    - Turns on the red LED and buzzer if the gas level exceeds the normal value.
+4. The gas level is displayed on the LCD, and the data is sent to the API.
+5. If the system is OFF, the device enters idle mode, turning off all LEDs and the buzzer.
 ## Components Used
 
 1. **Hardware:**
