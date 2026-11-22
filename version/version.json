@@ -1,5 +1,5 @@
 {
   "version": "1.0.0",
-  "baseUrl": "https://air-sens-api.vercel.app/",
+  "baseUrl": "https://air-sense-api.vercel.app/",
   "voiceUrl": "http://172.20.10.7:5000/voice"
 }
