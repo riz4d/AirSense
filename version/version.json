@@ -1,5 +1,5 @@
 {
   "version": "1.0.0",
-  "baseUrl": "http://139.59.90.98:5000/",
-  "voiceUrl": "http://139.59.90.98:5000/voice"
+  "baseUrl": "https://139.59.90.98:5000/",
+  "voiceUrl": "https://139.59.90.98:5000/voice"
 }
